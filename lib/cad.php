@@ -1,6 +1,6 @@
 <?php
 
-    require_once('cmd/con.php');
+    require_once('../cmd/con.php');
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -8,7 +8,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-	<title>slideroom</title>
+	<title>sem título</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<meta name="generator" content="Geany 1.33" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +32,7 @@ body{
   font-size:12px;
   color:#C4BCB0;
 }
-input[type="email"],
+input[type="email"], input[type="text"],
 input[type="password"]{
   background:#EAE6E1;
   border:0;
@@ -143,8 +143,6 @@ a{
 }
 .main-form > div >a:first-child{
   font-weight:bold;
-  color: gray;
-  padding-top: 5px;
 }
 .main-form > div >a:nth-child(2){
   border:1px solid #3DA087;
@@ -174,13 +172,12 @@ a{
 	<div class="main-form">
 	  <!--<i class="logo"></i>-->
 	  <h3 style="text-align: center; color: #50BFA4;">Login</h3>
-	  <input type="email" placeholder="email" name="email" required>
-	  <input type="password" placeholder="Senha" name="pass" required>
-	  <input type="submit" value="Entrar" name="entrar">
-	  <div>
-	   <a href="#" title="">Recuperar senha?</a>
-	   <a href="lib/cad.php" title="">Criar conta</a>
-  	  </div>
+	  <!--<input type="text" placeholder="Primeiro nome" name="pname" required />
+    <input type="text" placeholder="Último nome" name="fname" required/>-->
+    <input type="email" placeholder="email" name="email" required />
+	  <input type="password" placeholder="Senha" name="pass" required />
+    <input type="password" placeholder="Repetir Senha" name="r_pass" required/>
+	  <input type="submit" value="Cadastrar" name="cadastrar">
 <?php
 
     $email= addslashes($_POST['email']);

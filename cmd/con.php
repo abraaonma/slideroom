@@ -7,7 +7,7 @@
 	try
 	{
 
-		$con = new PDO("mysql:host=$host;dbname=hiasd", $user, $pass);
+		$con = new PDO("mysql:host=$host;dbname=slideroom", $user, $pass);
 		$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		//echo "Banco conectado com sucesso!";
 		
